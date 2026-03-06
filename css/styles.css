@@ -1,0 +1,575 @@
+:root {
+    --brand-blue: #6178A6;
+    --inter: "Inter", sans-serif;
+    --inria-sans: "Inria Sans", sans-serif;
+    --inria-serif: "Inria Serif", serif;
+    --text: rgb(51,51,51);
+    --plain-links: rgb(97,120,166);
+    --grey: rgb(102,102,102);
+    --pale-grey: rgb(216,216,216);
+    --warning: rgb(226,111,101);
+    --success: rgb(124,182,144);
+}
+
+/* utility classes */
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+svg {
+    width: 1rem;
+}
+
+button {
+    border: unset;
+    background-color: unset;
+}
+
+.inner-container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+/* typography */
+
+body {
+    font-family: var(--inter);
+    font-weight: 400;
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--plain-links);
+}
+
+.hero {
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--inria-sans);
+    font-weight: 400;
+    font-size: 12.5rem;
+    line-height: 1;
+}
+
+.hero p {
+    font-size: 3rem;
+    font-family: var(--inria-sans);
+}
+
+h2 {
+    font-family: var(--inria-sans);
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+h3 {
+    font-family: var(--inria-sans);
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.division-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--grey);
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.btn h4,
+.btn p {
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    line-height: 1;
+    font-size: 0.75rem;
+}
+
+.sign-up {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: var(--inria-sans);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.modal-content p:last-of-type {
+    color: var(--grey);
+}
+
+/* nav styling */
+
+.nav-bar {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2rem 0;
+}
+
+.nav-bar li:first-of-type {
+    font-weight: 700;
+}
+
+.nav-bar li:nth-of-type(2) {
+    font-weight: 100;
+    font-style: italic;
+}
+
+.nav-bar .flex {
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 1.25rem;
+    justify-content: center;
+}
+
+.secondary-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1.5rem;
+}
+
+.secondary-nav h2 {
+    font-family: var(--inria-serif);
+    font-size: 8rem;
+}
+
+.secondary-nav svg {
+    width: 6rem;
+}
+
+.secondary-nav ul {
+    display: none;
+    font-size: 2rem;
+}
+
+
+/* home page styling */
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.division-section h2,
+.arrivals-section h2 {
+    margin: 4rem 0;
+}
+
+.division-section,
+.arrivals-section {
+    padding: 0 2rem;
+}
+
+.division-card div {
+    border: 1px solid var(--pale-grey);
+    padding: 1rem;
+}
+.division-card {
+    margin-bottom: 2rem;
+}
+
+.division-card p {
+    padding: 1rem 0;
+}
+
+.division-img1 {
+    background: url('../img/man-on-rock.webp') top / cover no-repeat;
+    height: 250px;
+}
+
+.division-img2 {
+    background: url('../img/yoga-on-beach.webp') bottom / cover no-repeat;
+    height: 250px;
+}
+
+.division-img3 {
+    background: url('../img/baby-in-sky.webp') top / cover no-repeat;
+    height: 250px;
+}
+
+.faux-buttons {
+    margin-top: 2rem;
+}
+
+.btn {
+    background-color: var(--text);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+}
+
+.horizontal-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    overflow-x: scroll;
+    margin-bottom: 2rem;
+}
+
+.scroll-card {
+    flex: 0 0 12.5rem;
+}
+
+.scroll-card h4 {
+    size: 1rem;
+    font-weight: 400;
+    margin: 1.5rem 0;
+}
+
+footer > div:last-of-type {
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+/* modal styles */
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    min-width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay .inner-container {
+    max-width: 400px;
+}
+
+.modal-img {
+    background: url('../img/people-on-beach.webp') center / cover no-repeat;
+    height: 260px;
+    border-radius: 10px 10px 0 0;
+}
+
+.close {
+    color: var(--text);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 2rem auto;
+}
+
+.close svg {
+    width: 1.75rem;
+}
+
+.sign-up {
+    background-color: var(--plain-links);
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+.modal-content {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.modal-content p {
+    margin: 2rem 0;
+}
+
+.modal-content {
+    border-radius: 0 0 10px 10px;
+}
+
+/* form page */
+
+.back-btn {
+    color: #000;
+    font-size: 0.875rem;
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 3rem;
+}
+
+.membership-header {
+    padding: 0.5rem 2rem;
+}
+
+.membership-header h3 {
+    font-family: var(--inter);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.membership-nav h2 {
+    font-family: var(--inter);
+    font-size: 1.5rem;
+}
+
+.membership-nav .flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.membership-header h2:first-of-type {
+    font-weight: 700;
+}
+
+.membership-header h2:nth-of-type(2) {
+    font-weight: 200;
+    font-style: italic;
+}
+
+.nav-second-line h2:first-of-type {
+    font-weight: 400;
+}
+
+.nav-second-line h2:last-of-type {
+    font-family: var(--inria-serif);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.form-section {
+    border: 1px solid var(--pale-grey);
+    margin: 2rem 2rem 4rem 2rem;
+    padding: 2rem;
+}
+
+fieldset {
+    border: unset;
+    padding: unset;
+}
+
+.form-section h3 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.form-section > p {
+    margin: 2rem 0;
+}
+
+.help li {
+    list-style: inside;
+    margin: unset;
+    padding-left: 1.5rem;
+}
+
+input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    margin: 0.5rem 0;
+}
+
+label:not(input[type="checkbox"] + label) {
+    font-weight: 700;
+    font-size: 1.25rem;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.help {
+    color: var(--grey);
+    font-size: 0.875rem;
+}
+
+.help li {
+    margin-top: 0.5rem;
+}
+
+.form-section h4 {
+    font-family: var(--inria-sans);
+    margin: 1rem 0;
+}
+
+.checkbox-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-flex svg {
+    max-width: 1.25rem;
+    min-width: 1.25rem;
+}
+
+input[type="submit"] {
+    border: unset;
+    background-color: var(--plain-links);
+    color: #fff;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    margin-top: 2rem;
+}
+
+.form-section button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+    color: var(--plain-links);
+}
+
+.form-section button svg {
+    min-width: 1.5rem;
+}
+
+.accordion-item {
+    border-bottom: solid 1px var(--pale-grey);
+}
+
+.accordion-item:last-of-type {
+    border: unset;
+}
+
+.collapsed {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.expanded {
+    max-height: unset;
+    opacity: 1;
+    visibility: visible;
+}
+
+.accordion-item p {
+    margin-bottom: 1rem;
+}
+
+/* form validation */
+
+fieldset input:invalid:not(:focus):not(:placeholder-shown) {
+    background:url('../img/svg/exclamation.svg') right 0.5rem center no-repeat;
+}
+
+fieldset input:valid:not(:focus):not(:placeholder-shown) {
+    background: url('../img/svg/check.svg') right 0.5rem center no-repeat;
+}
+
+
+/* large styling */
+
+@media screen and (min-width:840px) {
+
+    .flex {
+        flex-direction: row;
+    }
+
+    /* modal */
+
+    .overlay .inner-container {
+        max-width: 1080px;
+    }
+
+    .overlay {
+        padding: 5rem;
+    }
+
+    .modal-img {
+        height: unset;
+        width: 430px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .modal-content {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .nav-bar .flex {
+        justify-content: unset;
+        margin-left: 1rem;
+    }
+
+    .nav-bar {
+        padding: 1rem 0;
+    }
+
+    .hamburger-svg {
+        display: none;
+    }
+
+    .secondary-nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    .hero-content {
+        position: absolute;
+        bottom: 5rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0.5rem 2rem;
+    }
+
+    .division-section .flex {
+        column-gap: 4rem;
+        padding: 0 4rem;
+    }
+
+    .division-img1,
+    .division-img2,
+    .division-img3 {
+        height: 390px;
+    }
+
+    .division-section .faux-buttons {
+        padding: unset;
+        gap: 1rem;
+    }
+
+    .division-section .faux-buttons a {
+        width: calc((100% / 4) - (4rem / 4));
+    }
+
+    footer .flex {
+        justify-content: space-between;
+        padding: 2rem 4rem;
+    }
+
+    header.inner-container,
+    main.inner-container {
+        max-width: 700px;
+    }
+
+    .membership-nav {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
